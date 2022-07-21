@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>Indenticonジェネレーター</title>
+		<link rel="stylesheet" href="IndenticonGenerator.css">
+	</head>
+	<body>
+		<h1>Identiconジェネレーター</h1>
+		<p>GitHubのIdenticon（初期アイコン）のようなアイコンを生成します。</p>
+		<p>下のテキストボックスに任意の文字列を入力して<input type="button" value="生成" onclick="alert('これはサンプルのボタンです。');">をクリックして下さい。</p>
+		<p class="small_text">（注）GitHubのIdenticonと全く同じものを生成するものではありません。</p>
+		<div id="generator_area">
+			<canvas id="icon_canvas"></canvas>
+			<div id="input_area">
+				<input type="text">
+				<input type="button" value="生成">
+			</div>
+		</div>
+	</body>
+</html>

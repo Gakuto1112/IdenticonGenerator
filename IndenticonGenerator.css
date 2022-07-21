@@ -1,0 +1,13 @@
+.small_text {
+	font-size: small;
+}
+#generator_area {
+	display: flex;
+	width: fit-content;
+	flex-direction: column;
+	align-items: center;
+}
+#icon_canvas {
+	width: 420px;
+	height: 420px;
+}
