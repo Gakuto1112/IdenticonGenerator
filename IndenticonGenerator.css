@@ -1,3 +1,6 @@
+.hidden {
+	display: none !important;
+}
 .small_text {
 	font-size: small;
 }
@@ -10,4 +13,8 @@
 #icon_canvas {
 	width: 420px;
 	height: 420px;
+}
+#canvas_unavailable_message {
+	margin: 100px 0 0 40px;
+	color: gray;
 }
