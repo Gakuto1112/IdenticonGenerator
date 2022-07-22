@@ -10,8 +10,9 @@ function generate(generateString) {
 	const reader = new FileReader();
 	reader.addEventListener("load", () => {
 		crypto.subtle.digest("SHA-1", reader.result).then((resolve) => {
-			context.fillStyle = "black";
 			const hashString = [].map.call(new Uint8Array(resolve), x => ("00" + x.toString(16)).slice(-2)).join("");
+			const colorArray = Array.from(hashString.slice(-7));
+			context.fillStyle = "hsl(" + (Math.round(parseInt(colorArray.slice(0, 3).join(""), 16) * (360 / 4095))) + ", " + (65 - Math.round(parseInt(colorArray.slice(3, 5).join(""), 16) * (20 / 255))) + "%, " + (75 - Math.round(parseInt(colorArray.slice(5, 7).join(""), 16) * (20 / 255))) + "%)";
 			const dotArray = Array.from(hashString.slice(0, 15));
 			dotArray.forEach((dotChar, index) => {
 				if(parseInt(dotChar, 16) % 2 == 0) {
