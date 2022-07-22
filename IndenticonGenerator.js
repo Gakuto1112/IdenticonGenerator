@@ -41,6 +41,7 @@ function download() {
 if(canvas.getContext) {
 	context = canvas.getContext("2d");
 	init();
+	generate((new Date().toISOString()));
 }
 else {
 	document.getElementById("generator_area").classList.add("hidden");
