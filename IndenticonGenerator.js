@@ -26,8 +26,9 @@ function generate(generateString) {
 }
 
 function generateButton() {
-	init()
-	generate(document.getElementById("generate_key_string").value);
+	init();
+	const generateKeyString = document.getElementById("generate_key_string").value;
+	if(generateKeyString != "") generate(document.getElementById("generate_key_string").value);
 }
 
 if(canvas.getContext) {
