@@ -31,6 +31,13 @@ function generateButton() {
 	if(generateKeyString != "") generate(document.getElementById("generate_key_string").value);
 }
 
+function download() {
+	const link = document.createElement("a");
+	link.href = canvas.toDataURL("image/png");
+	link.download = "Indenticon.png";
+	link.click();
+}
+
 if(canvas.getContext) {
 	context = canvas.getContext("2d");
 	init();
